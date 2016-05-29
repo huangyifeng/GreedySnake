@@ -15,6 +15,8 @@
 @property(nonatomic, assign)NSInteger x;
 @property(nonatomic, assign)NSInteger y;
 
+- (instancetype)initWithX:(NSInteger)x Y:(NSInteger)y;
+
 - (void)moveStep:(NSInteger)step direction:(GSDirection)direction;
 
 @end

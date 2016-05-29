@@ -7,5 +7,5 @@
 //
 
 
-#import "GSEnum"
-#import "GSConst"
+#import "GSEnum.h"
+#import "GSConst.h"

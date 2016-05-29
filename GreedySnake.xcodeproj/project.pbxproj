@@ -14,8 +14,10 @@
 		C4EB37901CF882F6007D0D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EB378E1CF882F6007D0D34 /* Main.storyboard */; };
 		C4EB37921CF882F6007D0D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EB37911CF882F6007D0D34 /* Assets.xcassets */; };
 		C4EB37951CF882F6007D0D34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EB37931CF882F6007D0D34 /* LaunchScreen.storyboard */; };
-		C4EB379F1CF883B1007D0D34 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB379E1CF883B1007D0D34 /* Snake.m */; };
 		C4EB37A21CF887D9007D0D34 /* GSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB37A11CF887D9007D0D34 /* GSPoint.m */; };
+		C4FA2BB11CFAF362007B7F9C /* GSMap.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA2BB01CFAF362007B7F9C /* GSMap.m */; };
+		C4FA2BB41CFAF38E007B7F9C /* GSSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA2BB31CFAF38E007B7F9C /* GSSnake.m */; };
+		C4FA2BB81CFB101F007B7F9C /* GSDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA2BB71CFB101F007B7F9C /* GSDrawer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +35,14 @@
 		C4EB37911CF882F6007D0D34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4EB37941CF882F6007D0D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4EB37961CF882F6007D0D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4EB379D1CF883B1007D0D34 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
-		C4EB379E1CF883B1007D0D34 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
 		C4EB37A01CF887D9007D0D34 /* GSPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPoint.h; sourceTree = "<group>"; };
 		C4EB37A11CF887D9007D0D34 /* GSPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPoint.m; sourceTree = "<group>"; };
+		C4FA2BAF1CFAF362007B7F9C /* GSMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMap.h; sourceTree = "<group>"; };
+		C4FA2BB01CFAF362007B7F9C /* GSMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMap.m; sourceTree = "<group>"; };
+		C4FA2BB21CFAF38E007B7F9C /* GSSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSnake.h; sourceTree = "<group>"; };
+		C4FA2BB31CFAF38E007B7F9C /* GSSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSnake.m; sourceTree = "<group>"; };
+		C4FA2BB61CFB101F007B7F9C /* GSDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDrawer.h; sourceTree = "<group>"; };
+		C4FA2BB71CFB101F007B7F9C /* GSDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDrawer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 			children = (
 				C44F61F51CF9E197004C439D /* Common */,
 				C4EB379C1CF88397007D0D34 /* Entity */,
+				C4FA2BB51CFB1005007B7F9C /* View */,
 				C4EB37881CF882F6007D0D34 /* AppDelegate.h */,
 				C4EB37891CF882F6007D0D34 /* AppDelegate.m */,
 				C4EB378B1CF882F6007D0D34 /* ViewController.h */,
@@ -108,10 +115,21 @@
 			children = (
 				C4EB37A01CF887D9007D0D34 /* GSPoint.h */,
 				C4EB37A11CF887D9007D0D34 /* GSPoint.m */,
-				C4EB379D1CF883B1007D0D34 /* Snake.h */,
-				C4EB379E1CF883B1007D0D34 /* Snake.m */,
+				C4FA2BAF1CFAF362007B7F9C /* GSMap.h */,
+				C4FA2BB01CFAF362007B7F9C /* GSMap.m */,
+				C4FA2BB21CFAF38E007B7F9C /* GSSnake.h */,
+				C4FA2BB31CFAF38E007B7F9C /* GSSnake.m */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		C4FA2BB51CFB1005007B7F9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4FA2BB61CFB101F007B7F9C /* GSDrawer.h */,
+				C4FA2BB71CFB101F007B7F9C /* GSDrawer.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,12 +202,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4EB379F1CF883B1007D0D34 /* Snake.m in Sources */,
+				C4FA2BB41CFAF38E007B7F9C /* GSSnake.m in Sources */,
 				C4EB378D1CF882F6007D0D34 /* ViewController.m in Sources */,
 				C4EB378A1CF882F6007D0D34 /* AppDelegate.m in Sources */,
 				C4EB37A21CF887D9007D0D34 /* GSPoint.m in Sources */,
+				C4FA2BB81CFB101F007B7F9C /* GSDrawer.m in Sources */,
 				C4EB37871CF882F6007D0D34 /* main.m in Sources */,
 				C44F61F91CF9E217004C439D /* GSConst.m in Sources */,
+				C4FA2BB11CFAF362007B7F9C /* GSMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

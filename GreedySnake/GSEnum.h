@@ -6,6 +6,8 @@
 //  Copyright © 2016年 hyf. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 typedef NS_ENUM(NSUInteger, GSDirection)
 {
     GSDirectionUp = 0,
