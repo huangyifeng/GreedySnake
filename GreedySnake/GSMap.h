@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GSSnake.h"
-#import "GSPoint.h"
 
 @interface GSMap : NSObject
 
@@ -17,8 +15,7 @@
 @property(nonatomic, assign, readonly)NSInteger rowCount;
 @property(nonatomic, assign, readonly)NSInteger columnCount;
 
-@property(nonatomic, strong)GSSnake *snake;
-//@property(nonatomic, strong)NSMutableArray *beans;
-@property(nonatomic, strong)GSPoint *bean;
+@property(nonatomic, assign, readonly)NSArray *mapPoints;
+
 
 @end

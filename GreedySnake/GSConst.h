@@ -6,4 +6,7 @@
 //  Copyright © 2016年 hyf. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 
+//Map
+extern CGFloat const MAP_GRID_SIZE;

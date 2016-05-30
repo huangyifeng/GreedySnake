@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import "GSMap.h"
+#import "GSSnake.h"
+#import "GSBean.h"
 
 @interface GSDrawer : NSObject
 
+- (instancetype)initWithContext:(CGContextRef)context
+                            map:(GSMap *)map
+                          snake:(GSSnake *)snake;
+
 - (void)drawInContext:(CGContextRef)context
+                  map:(GSMap *)map
+                snake:(GSSnake *)snake
+                 bean:(GSBean *)bean;
+
 
 @end

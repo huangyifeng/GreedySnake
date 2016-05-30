@@ -7,14 +7,11 @@
 //
 
 #import "GSMap.h"
+#import "GSPoint.h"
 
 @interface GSMap ()
 
-@property(nonatomic, assign)NSArray *mapPoints;
-
 - (void)initModelComponent;
-
-- (void)createBean;
 
 @end
 
@@ -44,20 +41,7 @@
             [points addObject:point];
         }
     }
-    self.mapPoints = [NSArray arrayWithArray:points];
-}
-
-#pragma mark - private
-
-
-- (void)createBean
-{
-    NSMutableArray *restPoints = [_mapPoints mutableCopy];
-    NSArray *snakePoints = [_snake snakePoints];
-    [restPoints removeObjectsInArray:snakePoints];
-    
-    NSInteger randIndex = arc4random() % restPoints.count;
-    self.bean = [restPoints objectAtIndex:randIndex];
+    _mapPoints = [NSArray arrayWithArray:points];
 }
 
 @end
