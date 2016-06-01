@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C404D7D31CFC7610008866DB /* GSBean.m in Sources */ = {isa = PBXBuildFile; fileRef = C404D7D21CFC7610008866DB /* GSBean.m */; };
 		C44F61F91CF9E217004C439D /* GSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C44F61F81CF9E217004C439D /* GSConst.m */; };
+		C4B318EF1CFF12DD00C134E7 /* GSGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B318EE1CFF12DD00C134E7 /* GSGameController.m */; };
 		C4EB37871CF882F6007D0D34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB37861CF882F6007D0D34 /* main.m */; };
 		C4EB378A1CF882F6007D0D34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB37891CF882F6007D0D34 /* AppDelegate.m */; };
 		C4EB378D1CF882F6007D0D34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB378C1CF882F6007D0D34 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 		C44F61F61CF9E1BC004C439D /* GSCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSCommon.h; sourceTree = "<group>"; };
 		C44F61F71CF9E217004C439D /* GSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSConst.h; sourceTree = "<group>"; };
 		C44F61F81CF9E217004C439D /* GSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSConst.m; sourceTree = "<group>"; };
+		C4B318ED1CFF12DD00C134E7 /* GSGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGameController.h; sourceTree = "<group>"; };
+		C4B318EE1CFF12DD00C134E7 /* GSGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGameController.m; sourceTree = "<group>"; };
 		C4EB37821CF882F6007D0D34 /* GreedySnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreedySnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EB37861CF882F6007D0D34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4EB37881CF882F6007D0D34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				C4FA2BB31CFAF38E007B7F9C /* GSSnake.m */,
 				C404D7D11CFC7610008866DB /* GSBean.h */,
 				C404D7D21CFC7610008866DB /* GSBean.m */,
+				C4B318ED1CFF12DD00C134E7 /* GSGameController.h */,
+				C4B318EE1CFF12DD00C134E7 /* GSGameController.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				C4FA2BB41CFAF38E007B7F9C /* GSSnake.m in Sources */,
 				C4EB378D1CF882F6007D0D34 /* ViewController.m in Sources */,
 				C4EB378A1CF882F6007D0D34 /* AppDelegate.m in Sources */,
+				C4B318EF1CFF12DD00C134E7 /* GSGameController.m in Sources */,
 				C4EB37A21CF887D9007D0D34 /* GSPoint.m in Sources */,
 				C404D7D31CFC7610008866DB /* GSBean.m in Sources */,
 				C4FA2BB81CFB101F007B7F9C /* GSDrawer.m in Sources */,

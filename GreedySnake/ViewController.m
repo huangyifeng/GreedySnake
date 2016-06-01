@@ -7,17 +7,14 @@
 //
 
 #import "ViewController.h"
-#import "GSCommon.h"
 #import "GSMap.h"
 #import "GSSnake.h"
-#import "GSBean.h"
+#import "GSGameController.h"
 
 @interface ViewController ()
 
-//View
-@property(nonatomic, strong)GSSnake *snake;
-@property(nonatomic, strong)GSMap *map;
-@property(nonatomic, strong)GSBean *bean;
+//Model
+@property(nonatomic, strong)GSGameController *gameController;
 
 //UI
 @property(nonatomic, weak)IBOutlet UIImageView *imageView;
@@ -46,20 +43,20 @@
     
     [self initModelComponent];
     [self initViewComponent];
-
 }
 
 #pragma mark - private
 
 - (void)initModelComponent
 {
-    self.snake = [[GSSnake alloc] init];
+    GSSnake *snake = [[GSSnake alloc] init];
     
     CGSize size = _imageView.frame.size;
     NSInteger row = floorf(size.height / MAP_GRID_SIZE);
     NSInteger column = floorf(size.width / MAP_GRID_SIZE);
-    self.map = [[GSMap alloc] initWithRow:row column:column];
+    GSMap *map = [[GSMap alloc] initWithRow:row column:column];
     
+    self.gameController = [[GSGameController alloc] initWithMap:map snake:snake];
 }
 
 - (void)initViewComponent
@@ -69,7 +66,7 @@
 
 - (void)newGameButtonHandler
 {
-    
+    [self.gameController newGameStart];
 }
 
 @end

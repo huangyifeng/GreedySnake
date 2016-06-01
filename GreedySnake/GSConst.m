@@ -9,3 +9,5 @@
 #import "GSConst.h"
 
 CGFloat const MAP_GRID_SIZE = 15.0;
+
+CGFloat const SPEED_UP_FACTOR = 0.5;

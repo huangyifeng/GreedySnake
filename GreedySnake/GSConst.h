@@ -10,3 +10,7 @@
 
 //Map
 extern CGFloat const MAP_GRID_SIZE;
+
+//Game Controller
+extern CGFloat const  SPEED_UP_FACTOR;
+
