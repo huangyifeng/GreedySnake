@@ -12,9 +12,9 @@
 
 @interface GSGameController : NSObject
 
-- (instancetype)initWithMap:(GSMap *)map snake:(GSSnake *)snake;
+- (instancetype)initWithMap:(GSMap *)map;
 
-- (void)newGameStart;
-- (void)gameStop;
+- (void)startNewGame;
+- (void)stopGame;
 
 @end

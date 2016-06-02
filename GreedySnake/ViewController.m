@@ -49,14 +49,12 @@
 
 - (void)initModelComponent
 {
-    GSSnake *snake = [[GSSnake alloc] init];
-    
     CGSize size = _imageView.frame.size;
     NSInteger row = floorf(size.height / MAP_GRID_SIZE);
     NSInteger column = floorf(size.width / MAP_GRID_SIZE);
     GSMap *map = [[GSMap alloc] initWithRow:row column:column];
     
-    self.gameController = [[GSGameController alloc] initWithMap:map snake:snake];
+    self.gameController = [[GSGameController alloc] initWithMap:map];
 }
 
 - (void)initViewComponent
@@ -66,7 +64,7 @@
 
 - (void)newGameButtonHandler
 {
-    [self.gameController newGameStart];
+    [self.gameController startNewGame];
 }
 
 @end

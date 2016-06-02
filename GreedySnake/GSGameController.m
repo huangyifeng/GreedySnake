@@ -20,22 +20,24 @@
 @property(nonatomic, strong)GSBean *bean;
 
 @property(nonatomic, assign)CGFloat moveDuration;
-@property(nonatomic, assign)CGFloat speedUpFactor;
 @property(nonatomic, strong)NSTimer *timer;
 
 - (void)initModelComponent;
+- (void)nextMove;
 
+- (BOOL)isSnakeEatBean;
+- (BOOL)isSnakeCrashToWall;
 
 @end
 
 @implementation GSGameController
 
-- (instancetype)initWithMap:(GSMap *)map snake:(GSSnake *)snake
+- (instancetype)initWithMap:(GSMap *)map
 {
     if (self = [super init])
     {
         self.map = map;
-        self.snake = snake;
+        [self initModelComponent];
     }
     return self;
 }
@@ -44,16 +46,46 @@
 
 - (void)initModelComponent
 {
-    self.timer = [NSTimer timerWithTimeInterval:<#(NSTimeInterval)#> target:<#(nonnull id)#> selector:<#(nonnull SEL)#> userInfo:<#(nullable id)#> repeats:<#(BOOL)#>]
+    self.bean = [[GSBean alloc] init];
+    self.snake = [[GSSnake alloc] init];
 }
 
-#pragma mark - public 
-
-- (void)newGameStart
+- (void)nextMove
 {
+    [_snake nextMove];
     
 }
 
+- (BOOL)isSnakeEatBean
+{
+    //@TODO
+    return NO;
+}
 
+- (BOOL)isSnakeCrashToWall
+{
+    //@TODO
+    return NO;
+}
+
+
+#pragma mark - public 
+
+- (void)startNewGame
+{
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:SNAKE_SPEED_DURIATION
+                                                  target:self
+                                                selector:@selector(nextMove)
+                                                userInfo:nil
+                                                 repeats:YES];
+    [_snake reset];
+    [_bean randomFromPoints:_map.mapPoints without:_snake.snakePoints];
+}
+
+- (void)stopGame
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
 
 @end

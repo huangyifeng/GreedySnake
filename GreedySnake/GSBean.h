@@ -13,6 +13,6 @@
 
 @property(nonatomic, strong)GSPoint *position;
 
-+ (GSBean *)getRandomBeanFromPoints:(NSArray<GSPoint *> *)from without:(NSArray<GSPoint *> *)without;
+- (void)randomFromPoints:(NSArray<GSPoint *> *)from without:(NSArray<GSPoint *> *)without;
 
 @end

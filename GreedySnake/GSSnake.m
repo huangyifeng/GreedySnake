@@ -62,6 +62,11 @@
     _direction = (_direction + 1) % 4;
 }
 
+- (void)nextMove
+{
+    [self computeNextMove];
+}
+
 #pragma mark - private
 
 - (void)computeNextMove
@@ -108,6 +113,11 @@
 - (NSArray *)snakePoints
 {
     return [NSArray arrayWithArray:_snakeBody];
+}
+
+- (GSPoint *)snakeHead
+{
+    return [_snakeBody objectAtIndex:0];
 }
 
 @end

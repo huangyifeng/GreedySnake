@@ -10,16 +10,13 @@
 
 @implementation GSBean
 
-
-+ (GSBean *)getRandomBeanFromPoints:(NSArray<GSPoint *> *)from without:(NSArray<GSPoint *> *)without
+- (void)randomFromPoints:(NSArray<GSPoint *> *)from without:(NSArray<GSPoint *> *)without
 {
-    GSBean *bean = [[GSBean alloc] init];
     NSMutableArray *restPoints = [from mutableCopy];
     [restPoints removeObjectsInArray:without];
     
     NSInteger randIndex = arc4random() % restPoints.count;
-    bean.position = [restPoints objectAtIndex:randIndex];
-    return bean;
+    self.position = [restPoints objectAtIndex:randIndex];
 }
 
 @end
