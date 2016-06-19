@@ -10,11 +10,24 @@
 #import "GSSnake.h"
 #import "GSMap.h"
 
+
+@protocol GSGameControllerDelegate <NSObject>
+
+- (void)hintGameOver;
+- (void)updateWithImage:(UIImage *)image;
+
+@end
+
+
 @interface GSGameController : NSObject
 
-- (instancetype)initWithMap:(GSMap *)map;
+@property(nonatomic, weak)id<GSGameControllerDelegate> delegate;
 
+- (instancetype)initWithMapSize:(CGSize)mapSize;
+
+//- (void)swipeToDirection:()
 - (void)startNewGame;
 - (void)stopGame;
 
 @end
+

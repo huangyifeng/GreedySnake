@@ -26,6 +26,6 @@
 - (void)eatOneBean;
 - (void)nextMove;
 
-
+- (BOOL)checkCrashSelf;
 
 @end

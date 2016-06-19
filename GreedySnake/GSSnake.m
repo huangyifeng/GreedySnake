@@ -15,7 +15,6 @@
 @property(nonatomic, assign)BOOL    hasBeanEat;
 
 - (void)computeNextMove;
-- (BOOL)checkCrashSelf;
 
 @end
 

@@ -21,8 +21,9 @@
 
 - (void)initModelComponent;
 - (void)initViewComponent;
-
 - (void)newGameButtonHandler;
+
+- (void)swipeHandler:(UISwipeGestureRecognizer *)swipe;
 
 @end
 
@@ -49,22 +50,46 @@
 
 - (void)initModelComponent
 {
-    CGSize size = _imageView.frame.size;
-    NSInteger row = floorf(size.height / MAP_GRID_SIZE);
-    NSInteger column = floorf(size.width / MAP_GRID_SIZE);
-    GSMap *map = [[GSMap alloc] initWithRow:row column:column];
-    
-    self.gameController = [[GSGameController alloc] initWithMap:map];
+    self.gameController = [[GSGameController alloc] initWithMapSize:_imageView.frame.size];
+    _gameController.delegate = self;
 }
 
 - (void)initViewComponent
 {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New Game" style:UIBarButtonItemStylePlain target:self action:@selector(newGameButtonHandler)];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                action:@selector(swipeHandler:)];
+    [self.view addGestureRecognizer:swipe];
+    
 }
+
+#pragma mark - Action
 
 - (void)newGameButtonHandler
 {
     [self.gameController startNewGame];
+}
+
+- (void)swipeHandler:(UISwipeGestureRecognizer *)swipe
+{
+    
+}
+
+#pragma mark - GSGameControllerDelegate
+
+- (void)hintGameOver
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:@"GAME OVER"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)updateWithImage:(UIImage *)image
+{
+    _imageView.image = image;
 }
 
 @end

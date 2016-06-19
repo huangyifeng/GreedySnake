@@ -14,14 +14,11 @@
 
 @interface GSDrawer : NSObject
 
-- (instancetype)initWithContext:(CGContextRef)context
-                            map:(GSMap *)map
-                          snake:(GSSnake *)snake;
+- (instancetype)initWithMap:(GSMap *)map
+                      snake:(GSSnake *)snake
+                       bean:(GSBean *)bean;
 
-- (void)drawInContext:(CGContextRef)context
-                  map:(GSMap *)map
-                snake:(GSSnake *)snake
-                 bean:(GSBean *)bean;
+- (void)redrawWithContext:(CGContextRef)context;
 
 
 @end
